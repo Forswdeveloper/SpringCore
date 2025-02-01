@@ -1,5 +1,8 @@
 package hello.core;
 
+import hello.core.member.MemberRepository;
+import hello.core.member.MemoryMemberRepository;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.FilterType;
@@ -18,4 +21,8 @@ public class AutoAppConfig {
     //프로젝트의 메인 설정 정보는 스프링 부트 대표 시작 정보인 @SpringBootApplication를 프로젝트 시작 루트 위치에 두는 것이 관례.
     //스캔 기본 대상 : @Component, @Controller, @Service, @Repository, @Configuration
     //어노테이션은 상속관계가 없어서 서로 연동되지는 않는다. 자바 언어가 지원하는 기능이 아닌 스프링이 지원하는 기능이다.
+//    @Bean(name = "memoryMemberRepository")
+//    public MemberRepository memberRepository() {
+//        return new MemoryMemberRepository();
+//    }
 }

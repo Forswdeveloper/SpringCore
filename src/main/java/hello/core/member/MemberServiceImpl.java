@@ -10,8 +10,6 @@ public class MemberServiceImpl implements MemberService{
     private final MemberRepository memberRepository; //추상화에만 의존하는 코드
 
     //생성자를 통해서 어떤 Repository가 주입될지 결정
-
-
     // 의존관계 주입 자동화 @Component 를 쓸 때 의존관계 주입을 위한 설정.
     @Autowired // ac.getBean(MemberRepository.class)
     public MemberServiceImpl(MemberRepository memberRepository) {
